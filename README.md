@@ -2,18 +2,18 @@
 Contains code and data used to perform CAFA evaluation of PAN-GO data
 
 Annotations from six different automated annotation methods were compared with those from Pan-GO.
-* DeepGOCNN
-* DeepGOPlus
-* DeepGOZero
-* Diamond
-* PANNZER
-* TALE
+* [DeepGOCNN](https://github.com/dustine32/deepgoplus/tree/master)
+* [DeepGOPlus](https://github.com/dustine32/deepgoplus/tree/master)
+* [DeepGOZero](https://github.com/bio-ontology-research-group/deepgozero)
+* [Diamond](https://github.com/bbuchfink/diamond)
+* [PANNZER](http://ekhidna2.biocenter.helsinki.fi/sanspanz/)
+* [TALE](https://github.com/Shen-Lab/TALE)
 
 
 ## A. Input files:
 
 1. `PanGO_curated_genes` - This file contains a list of human genes in PanGO families that have at least one experimental annotation to any gene in the family. This is considered a list of curatable or trainable human genes. The file is also used to map the UniProt ID to the PANTHER gene IDs.
-2. `training_exp_human` - All experimental annotations to human genes from Gene Ontology [October 2019 release](https://release.geneontology.org/2019-10-07/index.html). The file includes directly annotated terms, as well as all the inferred parent terms based on GO ontology file. When parent terms are inferred, only 'is_a' and 'part_of' relationships were used.
+2. `training_exp_human` - All experimental annotations to human genes from Gene Ontology [October 2019 release](https://release.geneontology.org/2019-10-07/index.html). The file includes directly annotated terms, as well as all the inferred parent terms based on GO ontology file. When parent terms are inferred, only `is_a` and `part_of` relationships were used.
 These annotations, together with experimental annotations to all genomes, were used for training.
 The following terms (root terms and some binding terms) were excluded from the file: 
     * GO:0005515	protein binding
